@@ -10,7 +10,8 @@ import Header from "../../components/Header";
 const LoginPage: React.FC = () => {
     return (
         <div>
-            <Header/>
+            <Header isAuthenticated={false}/>
+            <Header isAuthenticated={true}/>
             <h1>Login Page</h1>
             <LoginForm/>
         </div>
