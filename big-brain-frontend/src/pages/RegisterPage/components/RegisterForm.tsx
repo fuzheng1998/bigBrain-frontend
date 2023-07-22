@@ -15,7 +15,7 @@ const RegisterForm: React.FC = () => {
                 <input type="password" name="confirmPassword" id="confirmPassword"/>
                 <Button
                     className={"my-3 mx-auto hover:underline hover:bg-white hover:text-zinc-800 hover:border-black hover:border-2"}
-                    variant={"primary"}>Join</Button>
+                    variant={"primary"}>Register</Button>
             </form>
         </div>
     );
