@@ -1,4 +1,5 @@
 import GameCard from "./components/GameCard";
+import Button from "../../components/Button";
 
 /**
  * @description Game List page component that renders the game list, also named as Dashboard
@@ -80,6 +81,7 @@ const ListPage = () => {
     return (
         <div>
             <h1>Game Dashboard</h1>
+            <Button children={"Create Game"} onClick={()=>console.log("Create Game clicked")}/>
             <div className={"grid grid-cols-3 gap-4"}>
                 {GameList.map((game) => (
                     <GameCard

@@ -5,21 +5,26 @@ interface GameCardProps {
     totalTime: number;
     onClick?: () => void;
 }
+
 /**
  * @description Game Card component that renders one game information,
  * showing the title, number of questions, a thumbnail, and total time to complete
  */
 
 const GameCard: React.FC<GameCardProps> = ({
-    title,
-    thumbnail,
-    numOfQuestions,
-    totalTime,
-    onClick,
-}) => {
+                                               title,
+                                               thumbnail,
+                                               numOfQuestions,
+                                               totalTime,
+                                               onClick,
+                                           }) => {
     return (
-        <div className={"group flex flex-col justify-center items-center hover:border-black hover:border cursor-pointer"}
-        onClick={onClick}>
+        <div
+            className={"group flex flex-col justify-center items-center hover:border-black hover:border cursor-pointer"}
+            onClick={onClick}>
+            <button className={"self-end hover:text-white hover:bg-zinc-800"}
+                    onClick={() => alert("would you like to delete it?")}>X
+            </button>
             <div className={"flex flex-col justify-center items-center"}>
                 <h1 className={"text-2xl font-bold"}>{title}</h1>
                 <img src={thumbnail} alt={title} className={"w-1/2"}/>
