@@ -3,18 +3,17 @@
  *
  *
  */
-import Header from "../../components/Header";
-import React from "react";
-import JoinForm from "./components/JoinForm";
+import Header from '../../components/Header';
+import JoinForm from './components/JoinForm';
 
-const JoinPage = () => {
-    return (
-        <div>
-            <Header isAuthenticated={false}/>
-            <Header isAuthenticated={true}/>
-            <h1>Join Page</h1>
-            <JoinForm/>
-        </div>
-    )
+function JoinPage() {
+  return (
+    <div>
+      <Header isAuthenticated={false} />
+      <Header isAuthenticated />
+      <h1>Join Page</h1>
+      <JoinForm />
+    </div>
+  );
 }
 export default JoinPage;

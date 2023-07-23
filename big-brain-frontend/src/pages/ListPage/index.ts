@@ -1,1 +1,1 @@
-export {default} from './ListPage';
+export { default } from './ListPage';
