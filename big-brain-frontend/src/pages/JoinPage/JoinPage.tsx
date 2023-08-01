@@ -3,15 +3,11 @@
  *
  *
  */
-import Header from '../../components/Header';
 import JoinForm from './components/JoinForm';
 
 function JoinPage() {
   return (
-    <div>
-      <Header isAuthenticated={false} />
-      <Header isAuthenticated />
-      <h1>Join Page</h1>
+    <div className="flex flex-col items-center justify-center h-screen">
       <JoinForm />
     </div>
   );

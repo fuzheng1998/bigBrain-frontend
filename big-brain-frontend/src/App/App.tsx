@@ -1,9 +1,6 @@
 import './App.css';
-import LoginPage from '../pages/LoginPage';
-import JoinPage from '../pages/JoinPage';
-import RegisterPage from '../pages/RegisterPage';
-import ListPage from '../pages/ListPage';
-import DetailPage from '../pages/DetailPage';
+import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 
 /**
  * @description The main App component, global layout for the entire app.
@@ -11,11 +8,13 @@ import DetailPage from '../pages/DetailPage';
 function App() {
   return (
     <div className="App">
-      <LoginPage />
-      <JoinPage />
-      <RegisterPage />
-      <ListPage />
-      <DetailPage />
+      <Header isAuthenticated={false} />
+      <Outlet />
+      {/* <LoginPage /> */}
+      {/* <JoinPage /> */}
+      {/* <RegisterPage /> */}
+      {/* <ListPage /> */}
+      {/* <DetailPage /> */}
     </div>
   );
 }

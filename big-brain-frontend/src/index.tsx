@@ -4,6 +4,7 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import JoinPage from './pages/JoinPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -12,6 +13,16 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <h1>Welcome to Big Brain</h1>,
+      },
+      {
+        path: '/join',
+        element: <JoinPage />,
+      },
+    ],
   },
 ]);
 root.render(
