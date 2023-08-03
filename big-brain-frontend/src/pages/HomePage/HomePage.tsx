@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <div className="flex h-screen">
       <div className="bg-amber-200 basis-1/2 flex justify-center items-center">
-        <Link to="/admin"> admin? click here</Link>
+        <Link to="/login"> admin? click here</Link>
       </div>
       <div className="bg-amber-700 basis-1/2 flex justify-center items-center">
         <Link to="/join">

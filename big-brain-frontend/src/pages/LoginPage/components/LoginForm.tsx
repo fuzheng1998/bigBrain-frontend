@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button';
 import { login } from '../../../fetchers';
 /**
@@ -7,13 +8,17 @@ import { login } from '../../../fetchers';
  */
 
 function LoginForm() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleClick = () => {
     console.log(`Email: ${email} Password: ${password}`);
     login(email, password)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+      })
       .catch((err) => console.log(err));
+    navigate('/list');
   };
   return (
     <div className="mx-52">

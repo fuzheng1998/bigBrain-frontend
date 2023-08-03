@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import JoinPage from './pages/JoinPage';
+import './index.css';
 import HomePage from './pages/HomePage';
+import JoinPage from './pages/JoinPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import reportWebVitals from './reportWebVitals';
+import ListPage from './pages/ListPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <LoginPage />,
+      },
+      {
+        path: '/list',
+        element: <ListPage />,
       },
     ],
   },
