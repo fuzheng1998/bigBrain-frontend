@@ -6,6 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import JoinPage from './pages/JoinPage';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/join',
         element: <JoinPage />,
+      },
+      {
+        path: '/login',
+        element: <LoginPage />,
       },
     ],
   },
