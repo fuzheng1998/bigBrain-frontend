@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../../../components/Button';
+import { login } from '../../../fetchers';
 /**
  * @description Login form component, inside LoginPage component
  *
@@ -9,20 +10,10 @@ function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleClick = () => {
-    fetch('http://localhost:5005/admin/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    }).then((res) => {
-      console.log('res: ', res);
-      if (res.status === 200) {
-        console.log('login successful');
-      } else {
-        console.log('login failed');
-      }
-    });
+    console.log(`Email: ${email} Password: ${password}`);
+    login(email, password)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
   return (
     <div className="mx-52">
@@ -35,9 +26,7 @@ function LoginForm() {
             name="email"
             id="email"
             value={email}
-            onChange={
-            (e) => setEmail(e.target.value)
-          }
+            onChange={(e) => setEmail(e.target.value)}
           />
         </label>
 
@@ -48,9 +37,7 @@ function LoginForm() {
             name="password"
             id="password"
             value={password}
-            onChange={
-              (e) => setPassword(e.target.value)
-            }
+            onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <Button
